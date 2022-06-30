@@ -24,5 +24,7 @@
         </dependency>
     </dependencies>
 
-    <build></build>
+    <build>
+        <finalName>dragon</finalName>
+    </build>
 </project>
