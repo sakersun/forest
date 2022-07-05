@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: flowable
+    profiles:
+        active: @env.profile@
+management:
+    endpoints:
+        web:
+            exposure:
+                include: ["*"]
+logging:
+    level:
+        org:
+            flowable: ERROR
+            springframework:
+                kafka:
+                    transaction: ERROR
+server:
+    port: 8086
+    servlet:
+        context-path: /flowable
