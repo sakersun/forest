@@ -1,0 +1,36 @@
+spring:
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL8Dialect
+        show-sql: true
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.47.128:3306/flowable?characterEncoding=UTF-8&nullCatalogMeansCurrent=true
+        username: flowable
+        password: flowable
+    mvc:
+        pathmatch:
+            matching-strategy: ANT_PATH_MATCHER
+    kafka:
+        bootstrap-servers: 192.168.47.128:9092
+        listener:
+            missing-topics-fatal: false
+        consumer:
+            group-id: consumer-group-1
+            auto-offset-reset: latest
+flowable:
+    idm:
+        enabled: true
+        app:
+            rest-enabled: true
+    eventregistry:
+        enabled: true
+        resource-location: "classpath*:/eventregistry/"
+    admin:
+        app:
+            security:
+                encryption:
+                    credentials-i-v-spec: j8kdO2hejA9lKmm6
+                    credentials-secret-spec: 9FGl73ngxcOoJvmL
