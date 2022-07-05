@@ -109,7 +109,8 @@
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
 				<includes>
-					<include>*.yaml</include>
+					<include>application.yaml</include>
+					<include>application-*.yaml</include>
 					<include>eventregistry/*</include>
 				</includes>
 			</resource>
@@ -133,15 +134,15 @@
 	<profiles>
 		<profile>
 			<id>office</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<properties>
 				<env.profile>office</env.profile>
 			</properties>
 		</profile>
 		<profile>
 			<id>home</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 			<properties>
 				<env.profile>home</env.profile>
 			</properties>
