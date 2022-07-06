@@ -1,0 +1,16 @@
+{
+    "key": "msg-channel",
+    "category": "channel",
+    "name": "msg channel",
+    "description": "msg channel description",
+    "channelType": "inbound",
+    "type": "kafka",
+    "deserializerType": "json",
+    "channelEventKeyDetection": {
+        "delegateExpression": "${customKeyDetector}"
+    },
+    "payloadExtractorDelegateExpression": "${customPayloadExtractor}",
+    "topics": [
+        "quickstart-events"
+    ]
+}

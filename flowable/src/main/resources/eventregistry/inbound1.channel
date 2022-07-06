@@ -1,0 +1,15 @@
+{
+    "key": "test-channel",
+    "category": "channel",
+    "name": "test channel",
+    "description": "test channel description",
+    "channelType": "inbound",
+    "type": "kafka",
+    "deserializerType": "json",
+    "channelEventKeyDetection": {
+        "jsonField": "processKey"
+    },
+    "topics": [
+        "quickstart-events"
+    ]
+}

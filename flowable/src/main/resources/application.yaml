@@ -11,10 +11,10 @@ management:
 logging:
     level:
         org:
-            flowable: ERROR
+            flowable: INFO
             springframework:
                 kafka:
-                    transaction: ERROR
+                    transaction: DEBUG
 server:
     port: 8086
     servlet:

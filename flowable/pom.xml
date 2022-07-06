@@ -134,15 +134,16 @@
 	<profiles>
 		<profile>
 			<id>office</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
+
 			<properties>
 				<env.profile>office</env.profile>
 			</properties>
 		</profile>
 		<profile>
 			<id>home</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<properties>
 				<env.profile>home</env.profile>
 			</properties>
